@@ -220,3 +220,120 @@ def solve_problem_qaoa(repeat, p, shots):
         
     return final_res
 
+def process_results_qaoa(results, IS_INC_SHOT = False):
+    if not IS_INC_SHOT:
+        metrics = ['P', 'Qubits', 'Depth', 'Max Time (s)', 'Avg Time (s)', 'Shots', '# Optimal', '# Better Approx', 
+            '# Poor Approx', '# Invalid', 'Max Opt. Calls', 'Avg Opt. Calls']
+    else:
+        metrics = ['Qubits', 'Depth', 'Max Time (s)', 'Avg Time (s)', 'Shots', '# Optimal', '# Better Approx', 
+            '# Poor Approx', '# Invalid', 'Max Opt. Calls', 'Avg Opt. Calls']
+    
+    p_val = []
+    qubits = []
+    depth = []
+#     depth = [96, 148, 200, 252, 304]
+    
+    time = []
+    least_time = []
+    avg_time = []
+    
+    shots = []
+    opt_sol = []
+    better_sol = []
+    poor_sol = []
+    invalid_sol = []
+    
+    opt_calls = []
+    max_opt_calls = []
+    avg_opt_calls = []
+    
+    for p in range(len(results)):
+        cur_res = results[p]
+        
+        p_val.append(p+1)
+        qubits.append(cur_res[0]['Qubits'])
+        # depth.append(cur_res[0]['Depth'])
+        depth.append(cur_res[0]['Transpile_Depth'])
+        
+        shots.append(cur_res[0]['Shots'])
+        
+        max_time = 0
+        min_time = 99999999
+        a_time = 0
+        
+        num_opt = 0
+        num_better = 0
+        num_poor = 0
+        num_invalid = 0
+        
+        num_o_calls = 0
+        num_min_o_calls = 999999999
+        a_calls = 0
+        
+        opt_sol_det = cur_res[0]['Problem']['opt_sol']
+        greedy_sol_det = cur_res[0]['Problem']['greedy_sol']
+        
+        for runs in cur_res:
+            
+            # Finding maximum execution time
+            if runs['Time'] > max_time:
+                max_time = round(runs['Time'],2)
+                
+            # Finding Minimum Execution Time
+            if runs['Time'] < min_time:
+                min_time = round(runs['Time'],2)
+                
+            # To compute average executiontime of one complete optimization
+            a_time = a_time + runs['Time']
+                
+            # Finding Solution Quality
+            KP_Sol = runs['KP_Sol']
+            KP_Val = runs['KP_Val']
+            Res_Status = runs['Res_Status']
+            
+            if Res_Status == 'INFEASIBLE':
+                num_invalid = num_invalid + 1
+            elif sorted(KP_Sol) == sorted(opt_sol_det['opt_index']) or KP_Val == opt_sol_det['opt_val']:
+                num_opt = num_opt + 1
+            elif KP_Val > greedy_sol_det['greedy_profit']:
+                num_better = num_better + 1
+            else:
+                num_poor = num_poor + 1
+                
+            # Getting Optimizer calls
+            if runs['Total_Iterations'] > num_o_calls:
+                num_o_calls = runs['Total_Iterations']
+                
+            if runs['Total_Iterations'] < num_min_o_calls:
+                num_min_o_calls = runs['Total_Iterations']
+            
+            a_calls = a_calls + runs['Total_Iterations']
+            
+        time.append(max_time)
+        least_time.append(min_time)
+        avg_time.append(round(a_time/len(cur_res),2))
+#         print(len(cur_res))
+        
+        opt_sol.append(num_opt)
+        better_sol.append(num_better)
+        poor_sol.append(num_poor)
+        invalid_sol.append(num_invalid)
+        
+        opt_calls.append(num_o_calls)
+        max_opt_calls.append(num_min_o_calls)
+        avg_opt_calls.append(math.ceil(a_calls/len(cur_res)))
+        
+        
+#     df_res = pd.DataFrame(list(zip(p_val, qubits, depth, time, least_time, shots, opt_sol, 
+#                                    better_sol, poor_sol, invalid_sol, opt_calls, max_opt_calls)),
+#                columns =metrics)
+    if not IS_INC_SHOT:
+        df_res = pd.DataFrame(list(zip(p_val, qubits, depth, time, avg_time, shots, opt_sol, 
+                                   better_sol, poor_sol, invalid_sol, opt_calls, avg_opt_calls)),
+               columns =metrics)
+    else:
+        df_res = pd.DataFrame(list(zip(qubits, depth, time, avg_time, shots, opt_sol, 
+                                   better_sol, poor_sol, invalid_sol, opt_calls, avg_opt_calls)),
+               columns =metrics)
+    return df_res
+
