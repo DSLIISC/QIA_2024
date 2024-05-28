@@ -337,3 +337,81 @@ def process_results_qaoa(results, IS_INC_SHOT = False):
                columns =metrics)
     return df_res
 
+def plot_benefit_across_repetitions(repeat, p_max, results):
+    from utils import problems, is_Noisy, filepath
+    
+    greedy_list = [problems[1]['greedy_sol']['greedy_profit'] for i in range(repeat)]
+    opt_list = [problems[1]['opt_sol']['opt_val'] for i in range(repeat)]
+    repeat_list = [x for x in range(1, repeat+1)]
+    
+    # Populate Val List
+    val_dict = dict()
+    for p in range(1, p_max+1):
+        val_dict[p] = []
+        
+        for run in results[p-1]:
+            val_dict[p].append(run['KP_Val'])
+    
+    
+    plot_file = os.path.join(filepath, 'across_repeats')
+    fig, ax = plt.subplots()
+    for p in range(1, p_max+1):
+        ax.plot(repeat_list, val_dict[p], linewidth=2, label = 'QAOA_' + str(p))
+    ax.plot(repeat_list, greedy_list, linewidth=2,label = 'Greedy')
+    ax.plot(repeat_list, opt_list, linewidth=2, label = 'Optimal')
+    # ax.plot(p_list, result, linewidth=2, marker ='*')
+    # df_prob = pd.DataFrame(list(zip(sol_list, wt_list, val_list, shot_list, status_list)),
+    fig.supxlabel("Shots")
+    fig.supylabel("Profit")
+    if is_Noisy:
+        fig.suptitle("QAOA - Benefit across Repetions (Noisy)")
+    else:
+        fig.suptitle("QAOA - Benefit across Repetions (Noiseless)")
+    ax.legend(loc="upper right")
+    # plt.xticks(np.arange(1, max(p_list) + 1, 1)) 
+    # plt.yticks(np.arange(0, max(result)+30, 25)) 
+    ax.set_ylim(ymin=0)
+    fig.tight_layout()
+    fig.savefig(plot_file)
+    
+def plot_benefit_across_shots(shots, results):
+    from utils import problems, is_Noisy, filepath
+    
+    greedy_list = [problems[1]['greedy_sol']['greedy_profit'] for i in shots]
+    opt_list = [problems[1]['opt_sol']['opt_val'] for i in shots]
+    x_list = [x for x in shots]
+    
+    # Populate Val List
+            
+    val_list = list()
+    for s in range(len(shots)):
+        cur_max_run = -1
+        for run in results[s]:
+            # Find max benefit across repetitions
+            if run['Res_Status'] == 'SUCCESS':
+                if run['KP_Val'] > cur_max_run:
+                    cur_max_run = run['KP_Val']
+        val_list.append(cur_max_run)
+    
+    
+    plot_file = os.path.join(filepath, 'across_shots')
+    fig, ax = plt.subplots()
+#     for p in range(1, p_max+1):
+    ax.plot(x_list, val_list, linewidth=2, label = 'QAOA')
+    ax.plot(x_list, greedy_list, linewidth=2,label = 'Greedy')
+    ax.plot(x_list, opt_list, linewidth=2, label = 'Optimal')
+    # ax.plot(p_list, result, linewidth=2, marker ='*')
+    # df_prob = pd.DataFrame(list(zip(sol_list, wt_list, val_list, shot_list, status_list)),
+    fig.supxlabel("Shots")
+    fig.supylabel("Profit")
+    if is_Noisy:
+        fig.suptitle("QAOA - Benefit across Shots (Noisy)")
+    else:
+        fig.suptitle("QAOA - Benefit across Shots (Noiseless)")
+    ax.legend(loc="upper right")
+    # plt.xticks(np.arange(1, max(p_list) + 1, 1)) 
+    # plt.yticks(np.arange(0, max(result)+30, 25)) 
+    ax.set_ylim(ymin=0)
+    fig.tight_layout()
+    fig.savefig(plot_file)
+
