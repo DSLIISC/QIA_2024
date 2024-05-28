@@ -289,3 +289,100 @@ def get_alpha_and_fudge(problems, delta, shots = 1):
     # Calculating fudge
     fudge = get_fudge(problems, alpha, bs_loop, Num_runs)
     return raw_alpha, alpha, fudge
+
+def getScore_OQIA(results):
+    ideal_b = results[0]['Problem']['opt_sol']['opt_val']
+    greedy_b = results[0]['Problem']['greedy_sol']['greedy_profit']
+    num_indexes = len(results[0]['Problem']['weights'])
+    total_calls = 2 ** num_indexes
+    
+    all_b = []
+    all_time = []
+    num_iterations = []
+    
+    for run in results:
+        if run['Res_Status'] == 'INFEASIBLE':
+            all_b.append(0)
+        else:
+            all_b.append(run['KP_Val'])
+        all_time.append(run['Time']) 
+        num_iterations.append(run['Total_Iterations'])
+        
+    oqia_score = 0
+    for x in all_b:
+        oqia_score = oqia_score + (x/ideal_b)
+    oqia_score = round(oqia_score / len(all_b),2)
+
+    oqia_score_opt = 0
+    for x in all_b:
+        if x == ideal_b:
+            oqia_score_opt = oqia_score_opt + 1
+    oqia_score_opt = round(oqia_score_opt / len(all_b),2)
+
+    oqia_time = round(sum(all_time) / len(all_time),2)
+    
+    ideal_score = ideal_b/ideal_b
+    greedy_score = round(greedy_b/ideal_b,2)
+
+    min_score = round(min(all_b) / ideal_b,2)
+    
+    avg_iterations = round(sum(num_iterations) / len(num_iterations),2)
+    comp_overhead = round((avg_iterations / total_calls) * 100 ,2) 
+    
+
+    return_json = {'ideal_score': ideal_score, 'greedy_score': greedy_score, 'oqia_score_weighted': oqia_score, 'oqia_time (s)': oqia_time, 'oqia_score_opt':oqia_score_opt, 'oqia_min_score':min_score, 'total_calls': total_calls, 'Average_Calls': avg_iterations, 'computational_overhead': comp_overhead, 'Shots': results[0]['Shots'], 'P': results[0]['P'],'Qubits': results[0]['Qubits'],'Depth': results[0]['Depth'] }
+    return return_json
+
+
+def getScore_GS_relaxed(results):
+    ideal_b = results[0]['Problem']['opt_sol']['opt_val']
+    greedy_b = results[0]['Problem']['greedy_sol']['greedy_profit']
+    num_indexes = len(results[0]['Problem']['weights'])
+    total_calls = 2 ** num_indexes
+
+    all_b = []
+    all_time = []
+    success_runs = []
+    o_calls = []
+    
+    
+    for run in results:
+        all_b.append(run['Opt_Value'])
+        
+        all_time.append(run['Total_Time'])
+
+        o_calls.append(run['Tot_Oracle_Calls'])
+
+        if run['Run_Status'] == 'SUCCESS':
+            success_runs.append(1)
+        else:
+            success_runs.append(0)
+
+    gs_score_ideal = round(sum(success_runs) / len(success_runs),2)
+
+#     for run in results:
+#         all_b.append(run['Opt_Value'])
+
+    gs_score = 0
+    for x in all_b:
+        gs_score = gs_score + (x/ideal_b)
+    gs_score = round(gs_score / len(all_b),2)
+
+    gs_time = round(sum(all_time) / len(all_time),2)
+    
+    ideal_score = ideal_b/ideal_b
+    greedy_score = round(greedy_b/ideal_b,2)
+
+    o_call_range = []
+    o_call_range.append(2 * min(o_calls))
+    o_call_range.append(2 * max(o_calls))
+
+    avg_o_calls = round(2 * (sum(o_calls) / len(o_calls)),2)
+
+    min_score = round(min(all_b)/ideal_b,2)
+    
+    comp_overhead = round((avg_o_calls / total_calls) * 100 ,2) 
+
+    return_json = {'ideal_score': ideal_score, 'greedy_score': greedy_score, 'gs_score_relaxed': gs_score, 'Min_score': min_score ,'gs_score_ideal': gs_score_ideal, 'gs_time (s)': gs_time, 'o_calls_range': o_call_range, 'avg_o_calls': avg_o_calls, 'total_calls': total_calls, 'computational_overhead': comp_overhead, 'Shots': results[0]['Shots'],  'Alpha': results[0]['alpha'], 'Delta': results[0]['Success_Prob'], 'Qubits': results[0]['Qubits'], 'Depth': results[0]['Depth']}
+    
+    return return_json

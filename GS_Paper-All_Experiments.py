@@ -73,7 +73,7 @@ def main():
     parser.add_argument('-bp', '--base_path', type=str)
     parser.add_argument('-shot', '--shot', type=int)
     # parser.add_argument('-a', '--alpha', type=float)
-    parser.add_argument('-r', '--repeat', type=int)
+    parser.add_argument('-r', '--repeat', type=int, default=10)
     parser.add_argument('-n', '--noisy', type=bool, action=argparse.BooleanOptionalAction)
     parser.add_argument('-sp', '--successprob', type=float)
     
@@ -95,7 +95,8 @@ def main():
         print('No success_prob, setting to default value of 0.9')
         success_prob = 0.9
 
-    shots = [1,10,100,1000]
+#     shots = [1,10,100,1000]
+    shots = [1]
 
     for shot in shots:
         execute_gs(args.prob_id, args.noisy, args.base_path, shot, repeat = repeat, succ_prob=success_prob)

@@ -35,7 +35,8 @@ def execute_qaoa(prob_id, noisy, base_path, is_inc_shot, repeat = 10, p_max = 1,
     # Perform Experiments
     results = []
     if is_inc_shot:
-        shots = [1, 10, 100, 1000]
+#         shots = [1, 10, 100, 1000]
+        shots = [100]
         for shot in shots:
             res_p = solve_problem_qaoa(repeat, p_max, [shot])
             results.append(res_p)
@@ -57,21 +58,21 @@ def execute_qaoa(prob_id, noisy, base_path, is_inc_shot, repeat = 10, p_max = 1,
     print('Result Json at:', res_file)
 
     # Plot and save result json
-    df_res = None
-    if is_inc_shot:
-        df_res = process_results_qaoa(results, True)
-        df_res.set_index('Shots')
-    else:
-        df_res = process_results_qaoa(results)
-        df_res.set_index('P')
+#     df_res = None
+#     if is_inc_shot:
+#         df_res = process_results_qaoa(results, True)
+#         df_res.set_index('Shots')
+#     else:
+#         df_res = process_results_qaoa(results)
+#         df_res.set_index('P')
 
-    df_fn = os.path.join(filepath, 'res_df.png')
+#     df_fn = os.path.join(filepath, 'res_df.png')
 
-    # Plot Benefit Analysis
-    if is_inc_shot:
-        plot_benefit_across_shots(shots, results)
-    else:
-        plot_benefit_across_repetitions(repeat, p_max, results)
+#     # Plot Benefit Analysis
+#     if is_inc_shot:
+#         plot_benefit_across_shots(shots, results)
+#     else:
+#         plot_benefit_across_repetitions(repeat, p_max, results)
 
 def main():
     print("In QAOA Exepriment")
@@ -82,7 +83,7 @@ def main():
     parser.add_argument('-bp', '--base_path', type=str)
     parser.add_argument('-n', '--noisy', type=bool, action=argparse.BooleanOptionalAction)
     parser.add_argument('-inc', '--inc', type=bool, action=argparse.BooleanOptionalAction)
-    parser.add_argument('-r', '--repeat', type=int)
+    parser.add_argument('-r', '--repeat', type=int, default=10)
     parser.add_argument('-p', '--p_max', type=int)
     args = parser.parse_args()
 
