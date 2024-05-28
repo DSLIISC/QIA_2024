@@ -1,4 +1,4 @@
-This repository contains the source code to run the experiments in the "Index Advisors on Quantum Platforms" paper. 
+
 
 Install Anaconda and create the virtual environment using the environment file: conda env create -f env.yml
 
