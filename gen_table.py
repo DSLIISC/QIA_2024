@@ -50,28 +50,28 @@ def generate_table(res_location, repeat):
     with open(res_json, "r") as in_file:
         results = json.load(in_file)
     all_results = results['Results']
-    oqia_i5_res = getScore_OQIA(all_results[2])
+    oqia_i5_res = getScore_OQIA(all_results[0])
     
     prob_id = 6
     res_json = os.path.join(BASE_PATH, str(prob_id), shot_inc, exp_env, filename)
     with open(res_json, "r") as in_file:
         results = json.load(in_file)
     all_results = results['Results']
-    oqia_i6_res = getScore_OQIA(all_results[2])
+    oqia_i6_res = getScore_OQIA(all_results[0])
     
     prob_id = 7
     res_json = os.path.join(BASE_PATH, str(prob_id), shot_inc, exp_env, filename)
     with open(res_json, "r") as in_file:
         results = json.load(in_file)
     all_results = results['Results']
-    oqia_i7_res = getScore_OQIA(all_results[2])
+    oqia_i7_res = getScore_OQIA(all_results[0])
     
     prob_id = 71
     res_json = os.path.join(BASE_PATH, str(prob_id), shot_inc, exp_env, filename)
     with open(res_json, "r") as in_file:
         results = json.load(in_file)
     all_results = results['Results']
-    oqia_i71_res = getScore_OQIA(all_results[2])
+    oqia_i71_res = getScore_OQIA(all_results[0])
     
     
     problem_set = []
