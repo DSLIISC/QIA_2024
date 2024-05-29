@@ -149,7 +149,7 @@ def generate_table(res_location, repeat):
     
     labels = ['Problems', 'Weighted Average', 'Optimal Fraction', 'Worst Case', 
           'Qubits', 'Depth', 'Computation Overhead %']
-    df_res = pd.DataFrame(list(zip(problem_set, all_scores, ideal_score, min_score,
+    df_res = pd.DataFrame(list(zip(problem_set, avg_scores, ideal_score, min_score,
                                   qubits, depth, com_overhead)),
                columns =labels)
     print(df_res)
