@@ -28,4 +28,4 @@ python QAOA_Paper-All_Experiments.py -pid <5/6/7/71> -bp '<result_location>' --n
 Note : Repeat is optional. It will take the default value of 10.
 
 ### Experiment Log 
-Code execution log files store at _____  of SQIA and OQIA experiment with folders named according to problem id.   
+Code execution log files are stored in the 'logs' folder 
