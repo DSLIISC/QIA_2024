@@ -56,6 +56,8 @@ def execute_qaoa(prob_id, noisy, base_path, is_inc_shot, repeat = 10, p_max = 1,
 
 
     print('Result Json at:', res_file)
+    print(getScore_OQIA(results[0]))
+    # return getScore_OQIA(results[0])
 
     # Plot and save result json
 #     df_res = None

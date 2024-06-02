@@ -64,6 +64,9 @@ def execute_gs(prob_id, noisy, base_path, shot, succ_prob = 0.9, repeat = 10, al
     res_file = os.path.join(filepath, 'all_res_repeat_' + str(repeat) +'.json')
     persist_json_file(data, res_file)
 
+    print('Result Json at:', res_file)
+    print(getScore_GS_relaxed(exp_res))
+
 
 def main():
     print("In GS Exepriment")
