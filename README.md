@@ -25,7 +25,7 @@ You can also run without the repeat and success probability parameter. They will
 ```
 python QAOA_Paper-All_Experiments.py -pid <5/6/7/71> -bp '<result_location>' --no-noisy --inc
 ```
-Note : Again repeat is option. It will take the default value of 10.
+Note : Repeat is optional. It will take the default value of 10.
 
 ### Experiment Log 
 Code execution log files store at _____  of SQIA and OQIA experiment with folders named according to problem id.   
