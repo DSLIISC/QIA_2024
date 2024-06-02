@@ -330,7 +330,7 @@ def getScore_OQIA(results):
     comp_overhead = round((avg_iterations / total_calls) * 100 ,2) 
     
 
-    return_json = {'ideal_score': ideal_score, 'greedy_score': greedy_score, 'oqia_score_weighted': oqia_score, 'oqia_time (s)': oqia_time, 'oqia_score_opt':oqia_score_opt, 'oqia_min_score':min_score, 'total_calls': total_calls, 'Average_Calls': avg_iterations, 'computational_overhead': comp_overhead, 'Shots': results[0]['Shots'], 'P': results[0]['P'],'Qubits': results[0]['Qubits'],'Depth': results[0]['Transpile_Depth'] }
+    return_json = {'ideal_score': ideal_score, 'greedy_score': greedy_score, 'oqia_score_weighted': oqia_score, 'oqia_time (s)': oqia_time, 'oqia_score_opt':oqia_score_opt, 'oqia_min_score':min_score, 'computational_overhead': comp_overhead, 'Shots': results[0]['Shots'], 'P': results[0]['P'],'Qubits': results[0]['Qubits'],'Depth': results[0]['Transpile_Depth'] }
     return return_json
 
 
@@ -383,6 +383,6 @@ def getScore_GS_relaxed(results):
     
     comp_overhead = round((avg_o_calls / total_calls) * 100 ,2) 
 
-    return_json = {'ideal_score': ideal_score, 'greedy_score': greedy_score, 'gs_score_relaxed': gs_score, 'Min_score': min_score ,'gs_score_ideal': gs_score_ideal, 'gs_time (s)': gs_time, 'o_calls_range': o_call_range, 'avg_o_calls': avg_o_calls, 'total_calls': total_calls, 'computational_overhead': comp_overhead, 'Shots': results[0]['Shots'],  'Alpha': results[0]['alpha'], 'Delta': results[0]['Success_Prob'], 'Qubits': results[0]['Qubits'], 'Depth': results[0]['Depth']}
+    return_json = {'ideal_score': ideal_score, 'greedy_score': greedy_score, 'gs_score_relaxed': gs_score, 'Min_score': min_score ,'gs_score_ideal': gs_score_ideal, 'computational_overhead': comp_overhead, 'Shots': results[0]['Shots'],  'Alpha': results[0]['alpha'], 'Delta': results[0]['Success_Prob'], 'Qubits': results[0]['Qubits'], 'Depth': results[0]['Depth']}
     
     return return_json
