@@ -8,19 +8,6 @@ conda activate qia_sim
 ```
 
 ## For Experiments
-### Type 1 : Generate Result Table
-```
-python gen_table.py -bp '<result_location>' 
-```
-### Type 2 : By executing runExperiment.sh shell script file
-> [!NOTE]  
-> Running experiments can take several hours.
-```
-chmod +x runExperiment.sh
-./runExperiment.sh
-```
-
-### Type 3 : By running individual configuration,
 
 To Run the SQIA Experiments, execute the following command:
 ```
