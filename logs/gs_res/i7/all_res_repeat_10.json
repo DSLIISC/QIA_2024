@@ -1,0 +1,814 @@
+{
+    "Results": [
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.370445728302,
+            "Convergence": [
+                "Predicted Index Set:[0, 2, 4, 6], With Value:39, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[1, 2, 3, 5], With Value:43, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.50401973724365,
+            "Convergence": [
+                "Predicted Index Set:[0, 2, 4, 5], With Value:40, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.37334370613098,
+            "Convergence": [
+                "Predicted Index Set:[1, 2, 3, 6], With Value:42, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[1, 2, 3, 5], With Value:43, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 123.16352128982544,
+            "Convergence": [
+                "Predicted Index Set:[1, 2, 4, 5], With Value:38, And Weight:18",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.19927763938904,
+            "Convergence": [
+                "Predicted Index Set:[1, 2, 3, 5], With Value:43, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[1, 2, 3, 5], With Value:43, And Weight:19",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.93018913269043,
+            "Convergence": [
+                "Predicted Index Set:[0, 2, 4, 6], With Value:39, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 123.10928463935852,
+            "Convergence": [
+                "Predicted Index Set:[0, 2, 4, 5], With Value:40, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[1, 2, 3, 6], With Value:42, And Weight:19",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 123.75821328163147,
+            "Convergence": [
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.22372889518738,
+            "Convergence": [
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        },
+        {
+            "Problem": {
+                "weights": [
+                    7,
+                    6,
+                    4,
+                    2,
+                    1,
+                    7,
+                    7
+                ],
+                "profits": [
+                    14,
+                    12,
+                    10,
+                    8,
+                    3,
+                    13,
+                    12
+                ],
+                "max_wgt": 19,
+                "opt_sol": {
+                    "opt_val": 44,
+                    "opt_index": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "opt_wt": 19
+                },
+                "greedy_sol": {
+                    "greedy_ind": [
+                        0,
+                        2,
+                        3,
+                        4
+                    ],
+                    "greedy_weight": 14,
+                    "greedy_profit": 35,
+                    "isOptimal": false
+                }
+            },
+            "Problem_ID": 1,
+            "num_index_qubits (I)": 7,
+            "num_value_qubits": 8,
+            "num_weight_qubits": 7,
+            "num_ancilla_qubits": 3,
+            "Qubits": 25,
+            "Tot_Oracle_Calls": 48,
+            "Total_Time": 124.50401973724365,
+            "Convergence": [
+                "Predicted Index Set:[0, 2, 4, 5], With Value:40, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19",
+                "Predicted Index Set:None, With Value:-100, And Weight:None",
+                "Predicted Index Set:[0, 1, 2, 3], With Value:44, And Weight:19"
+            ],
+            "IS_Valid": "True",
+            "Opt_indexes": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "Opt_Value": 44,
+            "Opt_Weight": 19,
+            "IS_Sub_Optimal": "False",
+            "Run_Status": "SUCCESS",
+            "Success_Prob": 0.9,
+            "Num_Runs": 4,
+            "Max_Val": 71,
+            "alpha": 0.26,
+            "Total_Configs(L)": 128,
+            "Iter_Time_Out (alpha * sqrt(L))": 2,
+            "backend": "qasm_simulator",
+            "Shots": 1,
+            "Depth": 68,
+            "IsOptimal": true
+        }
+    ]
+}
