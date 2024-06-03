@@ -8,8 +8,8 @@ conda activate qia_sim
 ```
 
 ## For Experiments
-
-Please note that, given the inherent probabilistic nature of quantum computing, it is possible that a given experiment may not give
+> [!NOTE] 
+> Please note that, given the inherent probabilistic nature of quantum computing, it is possible that a given experiment may not give
 identical results across individual invocations.
 
 To Run the SQIA Experiments, execute the following command:
