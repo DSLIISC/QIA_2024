@@ -9,6 +9,9 @@ conda activate qia_sim
 
 ## For Experiments
 
+Please note that, given the inherent probabilistic nature of quantum computing, it is possible that a given experiment may not give
+identical results across individual invocations.
+
 To Run the SQIA Experiments, execute the following command:
 ```
 python GS_Paper-All_Experiments.py -pid <5/6/7/72> -bp '<result_location>' --no-noisy -r '<repeat the experiment>' -sp '<delta>'
