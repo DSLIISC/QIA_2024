@@ -11,6 +11,7 @@ conda activate qia_sim
 > [!NOTE] 
 > Please note that, given the inherent probabilistic nature of quantum computing, it is possible that a given experiment may not give
 identical results across individual invocations.
+> Depending on the platform, some experiments may take a few hours to finish.
 
 To Run the SQIA Experiments, execute the following command:
 ```
